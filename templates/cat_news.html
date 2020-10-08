@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-</head>
-<body>
-    <span>
-        {{ facts }}
-    </span>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<div class="bg-dark text-danger container">
+<span>  
+    <a href="{% url 'cats:home' %}" class="bg-dark text-white col-md-5">go back to home page</a>
+</span>
+<br>
+<br>
+<br>
+<span class="text-info">{{ facts }}</span>
+</div>
+{% endblock %}

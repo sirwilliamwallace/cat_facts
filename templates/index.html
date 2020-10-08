@@ -1,8 +1,9 @@
-<html>
-<body>
-<p>
-	wasuup !!!
-	
-</p>	
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div class="bg-dark text-danger container">
+<span class="text-white">
+	<a href="{% url 'cats:facts' %}" class="text-danger">see some facts about cats</a>
+</span>
+</div>
+{% endblock %}
