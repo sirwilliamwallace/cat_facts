@@ -18,5 +18,5 @@ from django.urls import path, include
 from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^',include('cat_news.urls')),
+    url(r'^',include('cat_news.urls', namespace='cats')),
 ]
